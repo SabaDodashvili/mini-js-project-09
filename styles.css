@@ -5,7 +5,6 @@
   align-items: center;
   height: 100vh;
   padding: 100px 0;
-  background-color: #191c1d;
 }
 .container__row {
   display: flex;
@@ -14,8 +13,8 @@
 .discounts {
 }
 .discounts__item {
-  height: 170px;
-  width: 170px;
+  height: 100px;
+  width: 100px;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -35,15 +34,33 @@
 .discounts__item:nth-child(4) {
   background-color: #51ca1b;
 }
+.discounts__item.hovered {
+  box-shadow: 0 0 10px #000;
+}
 .discounts__title {
   font-family: sans-serif;
   font-size: 24px;
   font-style: italic;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
 }
 .container__ball {
-  height: 50px;
-  width: 50px;
-  background-color: #fff;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background-color: #000;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: 700;
+  cursor: grab;
+}
+.container__ball.hold {
+  color: #c24513;
+}
+.container__ball.hide {
+  display: none;
 }
