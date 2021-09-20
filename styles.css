@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 0;
+  background-color: #191c1d;
+}
+.container__row {
+  display: flex;
+  align-items: center;
+}
+.discounts {
+}
+.discounts__item {
+  height: 170px;
+  width: 170px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.discounts__item:nth-child(1) {
+  background-color: #e80c13;
+}
+.discounts__item:nth-child(2) {
+  background-color: #e817a2;
+}
+.discounts__item:nth-child(3) {
+  background-color: #1bc4d2;
+}
+.discounts__item:nth-child(4) {
+  background-color: #51ca1b;
+}
+.discounts__title {
+  font-family: sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+}
+.container__ball {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+}
