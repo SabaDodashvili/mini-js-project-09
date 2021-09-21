@@ -33,4 +33,7 @@ function dragLeave(e) {
 }
 function dragDrop(e) {
   e.target.append(ball);
+  setTimeout(() => {
+    e.target.classList.add('selected');
+  }, 100);
 }

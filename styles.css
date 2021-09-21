@@ -13,6 +13,7 @@
 .discounts {
 }
 .discounts__item {
+  position: relative;
   height: 100px;
   width: 100px;
   color: #fff;
@@ -20,30 +21,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 15px;
+  margin: 0 25px;
+  transition: 0s;
 }
 .discounts__item:nth-child(1) {
   background-color: #e80c13;
+  box-shadow: 0px 0px 15px 15px #e80c13;
 }
 .discounts__item:nth-child(2) {
   background-color: #e817a2;
+  box-shadow: 0px 0px 15px 15px #e817a2;
 }
 .discounts__item:nth-child(3) {
   background-color: #1bc4d2;
+  box-shadow: 0px 0px 15px 15px #1bc4d2;
 }
 .discounts__item:nth-child(4) {
   background-color: #51ca1b;
+  box-shadow: 0px 0px 15px 15px #51ca1b;
+}
+.discounts__item > .container__ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .discounts__item.hovered {
-  box-shadow: 0 0 10px #000;
+  transition: 0.3s ease-in box-shadow 0s;
+  box-shadow: 0px 0px 0px #fff;
+}
+.discounts__item.selected {
+  transition: 0.5s ease-in height 0s, 0.5s ease-in width 0s;
+  height: 200px;
+  width: 200px;
+}
+.discounts__item.selected .container__ball {
+  transform: translate(-50%, -50%) rotate(360deg);
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  transition: 1.5s transform ease 0.5s, 1.5s height ease 0.5s, 1.5s width ease 0.5s, 1.5s font-size ease 0.5s;
+}
+.discounts__item.selected .discounts__title {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: 0.5s ease all 2s;
 }
 .discounts__title {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 37px;
+  line-height: 1.3;
+  font-weight: 500;
   font-style: italic;
   text-align: center;
   opacity: 0;
   visibility: hidden;
+  transform: scale(0);
+  transition: 0s;
 }
 .container__ball {
   height: 80px;
@@ -57,6 +92,7 @@
   font-family: sans-serif;
   font-weight: 700;
   cursor: grab;
+  transition: 0s;
 }
 .container__ball.hold {
   color: #c24513;
