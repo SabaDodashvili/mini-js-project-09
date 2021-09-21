@@ -81,6 +81,15 @@
   transition: 0s;
   user-select: none;
 }
+.container__text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: sans-serif;
+  font-size: 28px;
+  min-width: 700px;
+}
 .container__ball {
   height: 80px;
   width: 80px;
