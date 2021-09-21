@@ -79,6 +79,7 @@
   visibility: hidden;
   transform: scale(0);
   transition: 0s;
+  user-select: none;
 }
 .container__ball {
   height: 80px;
